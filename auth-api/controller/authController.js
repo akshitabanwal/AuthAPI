@@ -7,7 +7,7 @@ import db from "../db.js";
   
 
   const JWT_SECRET = process.env.JWT_SECRET;
-  //register user route
+
  export const register= async(req,res)=>{
     const {name,username,password}=req.body;
     if(!name||!username||!password){
