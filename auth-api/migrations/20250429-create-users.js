@@ -1,4 +1,4 @@
-// migrations/20250429-create-users.js
+
 import db from "../db.js";
 import UserModel from "../models/user.js";
 
