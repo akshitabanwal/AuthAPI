@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import './SecretPage.css'; // Import the CSS file
+import './SecretPage.css';
 
 const SecretPage = () => {
   const [Sctmsg, setMsg] = useState('');
@@ -22,9 +22,9 @@ const SecretPage = () => {
         console.error('Error  while fetching  the secret message:', error);
 
         if (error.response && (error.response.status === 403 || error.response.status === 401)) {
-          setBlurContent(true); // 👉 Set blur first
+          setBlurContent(true); 
 
-          // 👉 Let the DOM apply the blur first
+         
           setTimeout(() => {
             alert('Session expired. Please login again.');
             navigate('/');
@@ -38,7 +38,7 @@ const SecretPage = () => {
 
     fetchSecret();
 
-    const intervalId = setInterval(fetchSecret, 60000); // Check every minute
+    const intervalId = setInterval(fetchSecret, 60000); 
 
     return () => clearInterval(intervalId);
   }, [navigate]);
