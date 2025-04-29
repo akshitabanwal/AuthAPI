@@ -24,12 +24,12 @@ app.get("/",(req,res)=>{
 })
 async function start() {
   try {
-    console.log("🚀 Running migrations...");
-    await runMigration();               // 1️⃣ migrations first
-    console.log("🚀 Starting server...");
-    app.listen(Port, () => console.log(`Server on port ${Port}`));  // 2️⃣ then server
+   
+    await runMigration();            
+   
+    app.listen(Port, () => console.log(`Server on port ${Port}`)); 
   } catch (err) {
-    console.error("Startup failed:", err);
+    console.error("Migration failed to start:", err);
     process.exit(1);
   }
 }
