@@ -12,7 +12,7 @@ const SecretPage = () => {
   useEffect(() => {
     const fetchSecret = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/secrets', {
+        const response = await axios.get('http://localhost:5000/api/secrets', {
           withCredentials: true,
         });
 

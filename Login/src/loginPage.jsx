@@ -20,7 +20,7 @@ const toggleSignUp=()=>{
   }
   setFormData({username:"",password:"",name:""});
 }
-const URL="http://localhost:5000";
+const URL="http://localhost:5000/api";
 const handleLogin=async()=>{
   try{
     const res=await fetch(`${URL}/login`,{
