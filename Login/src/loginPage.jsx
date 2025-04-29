@@ -53,7 +53,7 @@ const handleSignup = async () => {
         username: formData.username,
         password: formData.password,
       }),
-      credentials: "include",  // Ensures cookies are sent with the request
+      credentials: "include", 
     });
 
     const data = await res.json();
